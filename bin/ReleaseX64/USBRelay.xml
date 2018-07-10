@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>USBRelay</name>
+    </assembly>
+    <members>
+        <member name="M:USB.RelayManager.Close">
+            <summary>
+            Finalizes library and clear dll allocated memory.
+            </summary>
+        </member>
+        <member name="M:USB.RelayManager.DevicesCount">
+            <summary>
+            Returns number of relays, detected in system. 
+            </summary>
+            <returns>Count of relay devices, if library was inited, and -1 otherwise</returns>
+        </member>
+        <member name="M:USB.RelayManager.Init">
+            <summary>
+            Trying to initialize a library. This function should be called before all other.
+            </summary>
+        </member>
+        <member name="M:USB.RelayManager.CloseDevice">
+            <summary>
+            Closes opened relay device.
+            </summary>
+            <returns>True if relay was opened, and false otherwise</returns>
+        </member>
+        <member name="M:USB.RelayManager.SelectDevice(System.Int32)">
+            <summary>
+            Selects relay device from list by index. If Current device was opened - it closes.
+            </summary>
+            <param name="deviceIndex">Relay index, 0-based</param>
+            <returns>True if selection was successfull, false if failed to select specified device</returns>
+        </member>
+        <member name="M:USB.RelayManager.ChannelsCount">
+            <summary>
+            Returns total number of channels for opened relay device.
+            </summary>
+            <returns>Number of relay channels, 0 if something wrong (not inited or device not opened)</returns>
+        </member>
+        <member name="M:USB.RelayManager.OpenDevice">
+            <summary>
+            Opens relay device, selected by Select routine.
+            </summary>
+            <returns>True on success, false otherwise</returns>
+        </member>
+        <member name="M:USB.RelayManager.OpenDevice(System.Int32)">
+            <summary>
+            Opens relay device by number (0-based).
+            </summary>
+            <param name="deviceIndex">Device index from 0 to DevicesCount - 1</param>
+            <returns>False if failed or device already opened</returns>
+        </member>
+        <member name="M:USB.RelayManager.OpenChannel(System.Int32)">
+            <summary>
+            Opens one channel of selected and opened relay.
+            </summary>
+            <param name="channelIndex">Channel index, 1-based</param>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.CloseChannel(System.Int32)">
+            <summary>
+            Closes one channel of selected and opened relay.
+            </summary>
+            <param name="channelIndex">Channel index, 1-based</param>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.OpenAllChannels">
+            <summary>
+            Opens all channels of selected and opened relay.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.CloseAllChannels">
+            <summary>
+            Closes all channels of selected and opened relay.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.RelaySerial">
+            <summary>
+            Reads identifier string of device. Usually 5-character long.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.RelayStatus">
+            <summary>
+            Get status of all relay channels on the device.
+            bit 0/1/2/3/4/5/6/7/8 indicate channel 1/2/3/4/5/6/7/8 status
+            Each bit value 1 means ON, 0 means OFF.
+            Relay should be opened, otherwise returns 0.
+            </summary>
+            <returns>Bitmask of all relay channels state, if the value > 0. Negative values mean error.</returns>
+        </member>
+        <member name="M:USB.RelayManager.Inited">
+            <summary>
+            Re-checks and return inited status.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.CurrentDeviceIndex">
+            <summary>
+            Re-checks and return current device number.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.ChannelOpened(System.Int32)">
+            <summary>
+            Checks if relay channel is opened. Relay device should be opened.
+            </summary>
+            <param name="channelIndex">Index of relay channel, 1-based</param>
+            <returns>True if everything is OK and channel is opened, false otherwise (closed or error)</returns>
+        </member>
+        <member name="M:USB.RelayManager.Open(System.Int32,System.Int32)">
+            <summary>
+            Opens one channel on selected relay device.
+            </summary>
+            <param name="deviceIndex">Index of device, 0-based</param>
+            <param name="channelIndex">Channel of selected device, 1-based</param>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.Close(System.Int32,System.Int32)">
+            <summary>
+            Closes one channel on selected relay device.
+            </summary>
+            <param name="deviceIndex">Index of device, 0-based</param>
+            <param name="channelIndex">Channel of selected device, 1-based</param>
+            <returns></returns>
+        </member>
+        <member name="M:USB.RelayManager.Invert(System.Int32,System.Int32)">
+            <summary>
+            Inverts one channel on selected relay device.
+            </summary>
+            <param name="deviceIndex">Index of device, 0-based</param>
+            <param name="channelIndex">Channel of selected device, 1-based</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

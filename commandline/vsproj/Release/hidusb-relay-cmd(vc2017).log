@@ -1,0 +1,4 @@
+﻿  hiddata_mswin.c
+  usbrelay-cmd.c
+  Generating Code...
+  hidusb-relay-cmd(vc2017).vcxproj -> F:\Relay\usb-relay-hid-master\windows-vs\Release\hidusb-relay-cmd.exe
