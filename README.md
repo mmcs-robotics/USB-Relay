@@ -7,6 +7,7 @@ Here are provided 3 projects:
 2. NetDLL – project for building managed DLL library – USBRelay.dll, it uses unmanaged dll (USB_RELAY_DEVICE.dll), and tested for .NET Framework 4.6. There some issues about using managed and unmanaged libraries together, so please read notice below carefully.
 3. NetDLLTest – simple C# console application, demonstrates usage of USBRealy.dll.
 4. bin – pre-built binaries (if you don't want to build it by yourself).
+
 For documentation please see [Help.md](https://github.com/mmcs-robotics/USB-Relay/blob/master/Docs/Help.md).
 
 # Configurations
