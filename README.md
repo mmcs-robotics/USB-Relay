@@ -1,5 +1,5 @@
 # USB-Relay
-This project is based on [usb-relay-hid](https://github.com/pavel-a/usb-relay-hid) repository for USB HID devices control. All licence information, docs, wiki can be found there. This project is addition, 
+This project is based on [usb-relay-hid](https://github.com/pavel-a/usb-relay-hid) repository for USB HID devices control. All licence information, docs, wiki can be found there. This project is addition – it provides managed DLL library for USB-Relay control for Standard .NET applications.
 
 # Contents
 Here are provided 3 projects:
