@@ -4,7 +4,7 @@ This project is based on [usb-relay-hid](https://github.com/pavel-a/usb-relay-hi
 # Contents
 Here are provided 3 projects:
 1. lib – folder, containing C project for unmanaged DLL. It can be used in C/C++ projects, but the USB_RELAY_DEVICE.dll can't be used directly in .NET managed application.
-2. NetDLL – project for building managed DLL library – USBRelay.dll, it uses unmanaged dll (USB_RELAY_DEVICE.dll), and tested for .NET Framework 4.6. There some issues about using managed and unmanaged libraries together, so please read notice below carefully.
+2. NetDLL – project for building managed DLL library – USBRelay.dll, it uses unmanaged dll (USB_RELAY_DEVICE.dll), and tested for .NET Framework 4.6. There are some issues about using managed and unmanaged libraries together, so please read notice below carefully.
 3. NetDLLTest – simple C# console application, demonstrates usage of USBRealy.dll.
 4. bin – pre-built binaries (if you don't want to build it by yourself).
 
