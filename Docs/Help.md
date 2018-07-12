@@ -30,6 +30,7 @@ These routines need `Init()` call before using:
 - `static int RelayManager.RelayStatus()` – gets status of all relay channels on the device. Bits 0/1/2/3/4/5/6/7/8 indicates channel 1/2/3/4/5/6/7/8 status. Each bit value 1 means ON, 0 means OFF. Relay should be opened, otherwise returns 0.
 - `static int RelayManager.ChannelsCount()` – returns total number of channels for opened relay device, 0 if something wrong (not inited or device not opened).
 - `static string RelayManager.RelaySerial()` – reads identifier string of device. Usually 5-character long.
+- `static string RelayManager.CurrentDeviceIndex()` – returns active relay device index (0-based).
 - `static bool RelayManager.CloseDevice()` – closes current device (selected and opened).
 - `static bool RelayManager.OpenChannel(int channelIndex)` – opens specified channel on current relay device. Channel index is 1-based.
 - `static bool RelayManager.CloseChannel(int channelIndex)` – closes specified channel on current relay device. Channel index is 1-based.
