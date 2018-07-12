@@ -34,5 +34,6 @@ These routines need `Init()` call before using:
 - `static bool RelayManager.CloseDevice()` – closes current device (selected and opened).
 - `static bool RelayManager.OpenChannel(int channelIndex)` – opens specified channel on current relay device. Channel index is 1-based.
 - `static bool RelayManager.CloseChannel(int channelIndex)` – closes specified channel on current relay device. Channel index is 1-based.
+- `static bool RelayManager.ChannelOpened(int channelIndex)` – checks if specified channel of active relay is opened.
 - `static bool RelayManager.OpenAllChannels()` – opens all channels of selected and opened relay.
 - `static bool RelayManager.CloseAllChannels()` – closes all channels of selected and opened relay.
